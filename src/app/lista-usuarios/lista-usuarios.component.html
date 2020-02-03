@@ -1,0 +1,16 @@
+<div class="container-lista">
+	<table>
+		<thead>
+			<tr>
+				<th>Foto</th>
+				<th>Usuário</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let usuario of listaUsuarios; index as i" [routerLink]="['/user', usuario.login]">
+				<td><img class="avatar" [src]="listaUsuarios[i].avatar_url"></td>
+				<td class="login">{{usuario.avatar_url}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,37 @@
+<div class="container-detalhes">
+	<ng-container *ngIf="usuario == undefined else elseBlock">
+		<fa-icon [icon]="faCog" [spin]="true"></fa-icon>
+	</ng-container>
+	<ng-template #elseBlock>
+		<div class="container-avatar">
+			<img [src]="usuario.avatar_url">
+		</div>
+		<div class="container-dados">
+			<div class="grupo-info">
+				<label>
+					Login:
+				</label>
+				{{usuario.login}}
+			</div>
+			<div class="grupo-info">
+				<label>
+					Quantidade de repositórios:
+				</label>
+				{{usuario.repos.length}}
+			</div>
+			<div class="grupo-info">
+				<label>
+					Quantidade de seguidores:
+				</label>
+				{{usuario.followers.length}}
+			</div>
+			<div class="grupo-info">
+				<label>
+					Criado em:
+				</label>
+				{{usuario.created_at}}
+			</div>
+		</div>
+		
+	</ng-template>
+</div>
