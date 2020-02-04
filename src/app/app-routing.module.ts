@@ -5,7 +5,8 @@ import { DetalhesUsuarioComponent } from './detalhes-usuario/detalhes-usuario.co
 
 const routes: Routes = [
 	{path: "", component: ListaUsuariosComponent},
-	{path: "user/:userId", component: DetalhesUsuarioComponent}
+	{path: "user/:userId", component: DetalhesUsuarioComponent},
+	{path: "busca/:strBusca", component: ListaUsuariosComponent}
 ];
 
 @NgModule({

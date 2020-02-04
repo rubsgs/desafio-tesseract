@@ -1,7 +1,7 @@
 <div class="barra-superior">
-	<span>Conheça o time da Tesseract</span>
+	<span [routerLink]="['/']">Conheça o time da Tesseract</span>
 	<div class="container-busca">
-		<input #txtBusca type="text" class="busca">
-		<fa-icon [icon]="faSearch" flip="horizontal"></fa-icon>
+		<input #txtBusca type="text" class="busca" (keydown.enter)="redirecionaBusca(txtBusca.value)">
+		<fa-icon [icon]="faSearch" flip="horizontal" [routerLink]="['/busca', txtBusca.value]" (click)="redirecionaBusca(txtBusca.value)"></fa-icon>
 	</div>
 </div>

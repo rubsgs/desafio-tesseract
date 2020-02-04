@@ -1,7 +1,6 @@
 .barra-superior {
 	min-height: 50px;
 	font-size: 24pt;
-	font-family: Helvetica;
 	padding-top: 0.5em;
 	background-color: #608de4;
 	color: #FFF;
@@ -11,6 +10,10 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: stretch;
+}
+
+.barra-superior > span{
+	cursor: pointer;
 }
 
 .container-busca{
@@ -37,4 +40,5 @@
 
 .container-busca fa-icon{
 	margin-top: 0.2%;
+	cursor: pointer;
 }

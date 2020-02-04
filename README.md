@@ -1,27 +1,22 @@
 # DesafioTesseract
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+Esse é um projeto feito para um desafio proposto no processo seletivo do Grupo Tesseract, foi desenvolvido utilizado o Angular v8.3.23.
 
-## Development server
+O projeto consiste em duas telas: a listagem de usuários e os detalhes do usuário, ambas com a possibilidade de realizar uma busca pelo login através da barra superior.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+##Lista de Usuários
 
-## Code scaffolding
+Disponível em /src/app/lista-usuarios e também é utilizada para realizar a busca pelo login dos usuários
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+##Detalhes do usuário
 
-## Build
+Disponível em /src/app/detalhes-usuario.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+##Barra superior
+Disponível em /src/app/barra-superior, é reponsável por fazer o redirecionamento para a busca ou para a listagem de usuários caso o "logo" seja clicado
 
-## Running unit tests
+###Informações importantes:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+A classe UsuarioModel é usada para modelar as informações recebidas pelo endpoint (https://api.github.com/orgs/grupotesseract/public_members), já a classe Usuario é usada para as informações do (https://api.github.com/orgs/grupotesseract/public_members).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+As requisições de informações gerais como a listagem de usuários e informações básicas de cada usuário são feitas através de usuarios.service, já as informações específicas de um usuário(quantidade de repositórios e quantidade de seguidores) ficam a cargo da própria classe Usuario
