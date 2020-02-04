@@ -17,6 +17,6 @@ export class UsuarioModel {
 	received_events_url: string;
 	type: string;
 	site_admin: boolean;
-	createdAt: string;
-	updatedAt: string;
+	created_at: string | Date;
+	updated_at: string | Date;
 }

@@ -9,7 +9,7 @@
 		<tbody>
 			<tr *ngFor="let usuario of listaUsuarios; index as i" [routerLink]="['/user', usuario.login]">
 				<td><img class="avatar" [src]="listaUsuarios[i].avatar_url"></td>
-				<td class="login">{{usuario.avatar_url}}</td>
+				<td class="login">{{usuario.login}}</td>
 			</tr>
 		</tbody>
 	</table>

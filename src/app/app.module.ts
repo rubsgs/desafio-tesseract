@@ -9,12 +9,14 @@ import { DetalhesUsuarioComponent } from './detalhes-usuario/detalhes-usuario.co
 
 //FontAwesome
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BarraSuperiorComponent } from './barra-superior/barra-superior.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		ListaUsuariosComponent,
-		DetalhesUsuarioComponent
+		DetalhesUsuarioComponent,
+		BarraSuperiorComponent
 	],
 	imports: [
 		BrowserModule,

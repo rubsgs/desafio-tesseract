@@ -1,6 +1,44 @@
+.container-lista{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
 .avatar{
 	min-height: 50px;
 	min-width: 50px;
 	max-height: 100px;
 	max-width: 100px;
+}
+
+.container-lista td{
+	text-align: center;
+}
+
+table{
+	width: 80%;
+	border-collapse: collapse;
+}
+
+tbody tr{
+	border-width: 1px 0px;
+	border-style: solid;
+	border-color: #608de4;
+}
+
+tbody tr:nth-child(2n+1) {
+	background-color: #0000001f;
+	cursor: pointer;
+}
+
+tbody tr:hover {
+	transition: 0.1s;
+	transition-property: background-color;
+	background-color: #608de4;
+}
+
+tbody td{
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
 }

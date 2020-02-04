@@ -1,6 +1,6 @@
 <div class="container-detalhes">
 	<ng-container *ngIf="usuario == undefined else elseBlock">
-		<fa-icon [icon]="faCog" [spin]="true"></fa-icon>
+		<fa-icon [icon]="faCog" [spin]="true" [size]="'10x'"></fa-icon>
 	</ng-container>
 	<ng-template #elseBlock>
 		<div class="container-avatar">
@@ -17,21 +17,30 @@
 				<label>
 					Quantidade de repositórios:
 				</label>
-				{{usuario.repos.length}}
+				<ng-container *ngIf="usuario.repos == undefined else elseRepos">
+					<fa-icon [icon]="faCog" [spin]="true"></fa-icon>
+				</ng-container>
+				<ng-template #elseRepos>
+					{{usuario.repos.length}}
+				</ng-template>
 			</div>
 			<div class="grupo-info">
 				<label>
 					Quantidade de seguidores:
 				</label>
-				{{usuario.followers.length}}
+				<ng-container *ngIf="usuario.followers == undefined else elseFollowers">
+					<fa-icon [icon]="faCog" [spin]="true" [size]="'10x'"></fa-icon>
+				</ng-container>
+				<ng-template #elseFollowers>
+					{{usuario.followers.length}}
+				</ng-template>
 			</div>
 			<div class="grupo-info">
 				<label>
 					Criado em:
 				</label>
-				{{usuario.created_at}}
+				{{usuario.getDataFormatada(usuario.created_at)}}
 			</div>
 		</div>
-		
 	</ng-template>
 </div>

@@ -1,0 +1,16 @@
+.container-detalhes{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-avatar{
+	min-width: 20%;
+	height: 100%;
+	text-align: center;
+}
+
+.container-dados{
+	height: 100%;
+}

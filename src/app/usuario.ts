@@ -25,8 +25,17 @@ export class Usuario extends UsuarioModel{
 		this.received_events_url = usuario.received_events_url
 		this.type = usuario.type;
 		this.site_admin = usuario.site_admin;
-		this.createdAt = usuario.createdAt;
-		this.updatedAt = usuario.updatedAt;
+		this.created_at = new Date(Date.parse(usuario.created_at.toString()));
+
+		if(isNaN(this.created_at.getTime())){
+			this.created_at = "Não disponível";
+		}
+
+		this.updated_at = new Date(Date.parse(usuario.updated_at.toString()));
+		if(isNaN(this.updated_at.getTime())){
+			this.updated_at = "Não disponível";
+		}
+
 		this.getFollowers().subscribe(followers => {this.followers = followers});
 		this.getRepos().subscribe(repos => {this.repos = repos});
 	}
@@ -37,5 +46,13 @@ export class Usuario extends UsuarioModel{
 
 	getRepos(): Observable<any>{
 		return this.http.get(this.repos_url);
+	}
+
+	getDataFormatada(data: Date): string{
+		if(isNaN(data.getTime())){
+			return "Não disponível";
+		} else {
+			return data.getDate() + "/" + data.getMonth() + "/" + data.getFullYear();
+		}
 	}
 }
