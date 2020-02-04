@@ -9,6 +9,7 @@
 	min-width: 50px;
 	max-height: 100px;
 	max-width: 100px;
+	border-radius: 100%;
 }
 
 .container-lista td{
@@ -20,8 +21,15 @@ table{
 	border-collapse: collapse;
 }
 
+thead tr {
+	min-height: 50px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #608de4;
+}
+
 tbody tr{
-	border-width: 1px 0px;
+	border-width: 1px;
 	border-style: solid;
 	border-color: #608de4;
 }
